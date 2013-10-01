@@ -10,6 +10,9 @@ public class MoveAble : MonoBehaviour {
 	
 	public PhotonPlayer holder;
 	
+	bool forceToApply = false;
+	Vector3 throwForce;
+	
 	[RPC]
 	public void PickUp (PhotonMessageInfo info) {
 		// Pick up the object.
@@ -25,13 +28,26 @@ public class MoveAble : MonoBehaviour {
 	}
 	
 	[RPC]
-	public void PutDown (PhotonMessageInfo info) {
+	public void PutDown () {
 		// Put down. Turn back on physics and the network view.
+		if (isMoving) {
+			rigidbody.velocity = Vector3.zero;
+			rigidbody.freezeRotation = false;
+			rigidbody.useGravity = true;
+			isMoving = false;
+			this.GetComponent<PhotonView>().synchronization = ViewSynchronization.ReliableDeltaCompressed;
+		}
+	}
+	
+	[RPC]
+	public void ThrowDown (float playerStrength, Vector3 forward) {
 		if (isMoving) {
 			rigidbody.freezeRotation = false;
 			rigidbody.useGravity = true;
 			isMoving = false;
 			this.GetComponent<PhotonView>().synchronization = ViewSynchronization.ReliableDeltaCompressed;
+			throwForce = forward * playerStrength;
+			forceToApply = true;
 		}
 	}
 	
@@ -47,7 +63,7 @@ public class MoveAble : MonoBehaviour {
 	}
 	
 	[RPC]
-	public void SetMoveToPosition(Vector3 position) {
+	public void SetMoveToPosition(Vector3 position, float playerStrength) {
 		towardsPosition = position;
 	}
 	
@@ -63,6 +79,11 @@ public class MoveAble : MonoBehaviour {
 		if (isMoving) {
 			var direction = towardsPosition - transform.position;
 			rigidbody.velocity = direction * force;
+		}
+
+		if (forceToApply) {
+			rigidbody.AddForce(throwForce * 1000);
+			forceToApply = false;
 		}
 	}
 	

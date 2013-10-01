@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class WorldManager : MonoBehaviour {
 	
@@ -7,9 +8,17 @@ public class WorldManager : MonoBehaviour {
 	// This stuff is only called by the host of the game so when they disconnect it all goes away. Uh oh!
 	public void SpawnWorld () {
 		// 1 test goup
-		PhotonNetwork.Instantiate("TestGoup", new Vector3(3, 3, 3), Quaternion.identity, 0);
-		PhotonNetwork.Instantiate("TestGoup1", new Vector3(-3, 3, 3), Quaternion.identity, 0);
-		PhotonNetwork.Instantiate("TestGoup2", new Vector3(3, 3, -3), Quaternion.identity, 0);
-		PhotonNetwork.Instantiate("TestGoup3", new Vector3(-3, 3, -3), Quaternion.identity, 0);
+		
+		var upten = new Vector3(0, 10, 0);
+		
+		foreach (int i in Enumerable.Range(0, 15)) {
+			var scale = Random.onUnitSphere * Random.Range(2, 10);
+			var mass = scale.magnitude * 2;
+			var newGoup = PhotonNetwork.Instantiate("TestGoup", (Random.onUnitSphere * 9) + upten, Quaternion.identity, 0);
+			var pv = newGoup.GetComponent<PhotonView>();
+			pv.RPC("Setup", PhotonTargets.AllBuffered, scale, mass);
+		}
+		
+		PhotonNetwork.Instantiate("Antisun", new Vector3(4, 200, 4), Quaternion.identity, 0);
 	}
 }

@@ -9,7 +9,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PhotonNetwork.ConnectUsingSettings("alpha-0.1");
+		PhotonNetwork.ConnectUsingSettings("alpha-0.7");
 	}
 	
 	void OnGUI () {
