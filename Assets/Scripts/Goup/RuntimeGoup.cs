@@ -20,4 +20,5 @@ public class RuntimeGoup : MonoBehaviour {
 	void Start () {
 		this.transform.parent = GameObject.Find("DynamicObjects").transform;
 	}
+	
 }

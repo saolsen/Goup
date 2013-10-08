@@ -113,8 +113,13 @@
      <Compile Include="Assets\Scripts\Goup\NetworkSync.cs" />
      <Compile Include="Assets\Scripts\Goup\RuntimeGoup.cs" />
      <Compile Include="Assets\Scripts\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Player\Crosshair.cs" />
      <Compile Include="Assets\Scripts\Player\MoveGoup.cs" />
+     <Compile Include="Assets\Scripts\PreceduralGoup.cs" />
+     <Compile Include="Assets\Scripts\SchemeHelpers.cs" />
+     <Compile Include="Assets\Scripts\SetName.cs" />
      <Compile Include="Assets\Scripts\SyncTransform.cs" />
+     <Compile Include="Assets\Scripts\TestBehavior.cs" />
      <Compile Include="Assets\Scripts\WorldManager.cs" />
      <Compile Include="Assets\UltimateFPS\Scripts\Core\ComponentSystem\vp_Component.cs" />
      <Compile Include="Assets\UltimateFPS\Scripts\Core\ComponentSystem\vp_ComponentPreset.cs" />
@@ -349,6 +354,519 @@
      <None Include="Assets\UltimateFPS\Scripts\Presets\Standard\Controller\ControllerDefault.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\GameDraw\Shaders\Highlight.shader" />
+ <Reference Include="Assets\lib\as-match">
+ <HintPath>Assets\lib\as-match.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\fectors">
+ <HintPath>Assets\lib\fectors.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr">
+ <HintPath>Assets\lib\ironscheme.clr.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr.dynamic">
+ <HintPath>Assets\lib\ironscheme.clr.dynamic.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr.helpers">
+ <HintPath>Assets\lib\ironscheme.clr.helpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr.reflection">
+ <HintPath>Assets\lib\ironscheme.clr.reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr.shorthand-helper">
+ <HintPath>Assets\lib\ironscheme.clr.shorthand-helper.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.clr.shorthand">
+ <HintPath>Assets\lib\ironscheme.clr.shorthand.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.console">
+ <HintPath>Assets\lib\ironscheme.console.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.contracts-helper">
+ <HintPath>Assets\lib\ironscheme.contracts-helper.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.contracts">
+ <HintPath>Assets\lib\ironscheme.contracts.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.conversions">
+ <HintPath>Assets\lib\ironscheme.conversions.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.datetime">
+ <HintPath>Assets\lib\ironscheme.datetime.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.debugger">
+ <HintPath>Assets\lib\ironscheme.debugger.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\IronScheme">
+ <HintPath>Assets\lib\IronScheme.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.environment">
+ <HintPath>Assets\lib\ironscheme.environment.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.files">
+ <HintPath>Assets\lib\ironscheme.files.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.fsm-cond-helpers">
+ <HintPath>Assets\lib\ironscheme.fsm-cond-helpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.fsm-cond">
+ <HintPath>Assets\lib\ironscheme.fsm-cond.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.integrable">
+ <HintPath>Assets\lib\ironscheme.integrable.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.io">
+ <HintPath>Assets\lib\ironscheme.io.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.linq">
+ <HintPath>Assets\lib\ironscheme.linq.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.process">
+ <HintPath>Assets\lib\ironscheme.process.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.random">
+ <HintPath>Assets\lib\ironscheme.random.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.record-case">
+ <HintPath>Assets\lib\ironscheme.record-case.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.regex-cond">
+ <HintPath>Assets\lib\ironscheme.regex-cond.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.regex">
+ <HintPath>Assets\lib\ironscheme.regex.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.registry">
+ <HintPath>Assets\lib\ironscheme.registry.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.strings">
+ <HintPath>Assets\lib\ironscheme.strings.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.define-macro">
+ <HintPath>Assets\lib\ironscheme.syntax.define-macro.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax">
+ <HintPath>Assets\lib\ironscheme.syntax.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.library-utils">
+ <HintPath>Assets\lib\ironscheme.syntax.library-utils.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.parameters">
+ <HintPath>Assets\lib\ironscheme.syntax.parameters.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.shorthand">
+ <HintPath>Assets\lib\ironscheme.syntax.shorthand.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.symbolic-case">
+ <HintPath>Assets\lib\ironscheme.syntax.symbolic-case.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.syntax.utils">
+ <HintPath>Assets\lib\ironscheme.syntax.utils.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.threading">
+ <HintPath>Assets\lib\ironscheme.threading.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.core">
+ <HintPath>Assets\lib\ironscheme.typed.core.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed">
+ <HintPath>Assets\lib\ironscheme.typed.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.parsing-helper">
+ <HintPath>Assets\lib\ironscheme.typed.parsing-helper.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.parsing">
+ <HintPath>Assets\lib\ironscheme.typed.parsing.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.struct-case">
+ <HintPath>Assets\lib\ironscheme.typed.struct-case.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.struct-descriptor">
+ <HintPath>Assets\lib\ironscheme.typed.struct-descriptor.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.typed.struct">
+ <HintPath>Assets\lib\ironscheme.typed.struct.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\ironscheme.xml">
+ <HintPath>Assets\lib\ironscheme.xml.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\list-match">
+ <HintPath>Assets\lib\list-match.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\match">
+ <HintPath>Assets\lib\match.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\minikanren">
+ <HintPath>Assets\lib\minikanren.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\minikanren.mk">
+ <HintPath>Assets\lib\minikanren.mk.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\minikanren.mkextraforms">
+ <HintPath>Assets\lib\minikanren.mkextraforms.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\minikanren.mkprelude">
+ <HintPath>Assets\lib\minikanren.mkprelude.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.bbtrees">
+ <HintPath>Assets\lib\pfds.bbtrees.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.deques">
+ <HintPath>Assets\lib\pfds.deques.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.dlists">
+ <HintPath>Assets\lib\pfds.dlists.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.fingertrees">
+ <HintPath>Assets\lib\pfds.fingertrees.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.heaps">
+ <HintPath>Assets\lib\pfds.heaps.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.private.lazy-lists">
+ <HintPath>Assets\lib\pfds.private.lazy-lists.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.psqs">
+ <HintPath>Assets\lib\pfds.psqs.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.queues">
+ <HintPath>Assets\lib\pfds.queues.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.sequences">
+ <HintPath>Assets\lib\pfds.sequences.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\pfds.sets">
+ <HintPath>Assets\lib\pfds.sets.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.0.cond-expand">
+ <HintPath>Assets\lib\srfi.0.cond-expand.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.0">
+ <HintPath>Assets\lib\srfi.0.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.1">
+ <HintPath>Assets\lib\srfi.1.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.1.lists">
+ <HintPath>Assets\lib\srfi.1.lists.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.101">
+ <HintPath>Assets\lib\srfi.101.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.101.random-access-lists">
+ <HintPath>Assets\lib\srfi.101.random-access-lists.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.102">
+ <HintPath>Assets\lib\srfi.102.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.102.procedure-arity">
+ <HintPath>Assets\lib\srfi.102.procedure-arity.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.11">
+ <HintPath>Assets\lib\srfi.11.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.11.let-values">
+ <HintPath>Assets\lib\srfi.11.let-values.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.111.boxes">
+ <HintPath>Assets\lib\srfi.111.boxes.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.111">
+ <HintPath>Assets\lib\srfi.111.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.112">
+ <HintPath>Assets\lib\srfi.112.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.112.environment-inquiry">
+ <HintPath>Assets\lib\srfi.112.environment-inquiry.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.13">
+ <HintPath>Assets\lib\srfi.13.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.13.strings">
+ <HintPath>Assets\lib\srfi.13.strings.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.14.char-sets">
+ <HintPath>Assets\lib\srfi.14.char-sets.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.14">
+ <HintPath>Assets\lib\srfi.14.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.16.case-lambda">
+ <HintPath>Assets\lib\srfi.16.case-lambda.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.16">
+ <HintPath>Assets\lib\srfi.16.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.19">
+ <HintPath>Assets\lib\srfi.19.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.19.time.compat">
+ <HintPath>Assets\lib\srfi.19.time.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.19.time">
+ <HintPath>Assets\lib\srfi.19.time.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.2.and-let%2a">
+ <HintPath>Assets\lib\srfi.2.and-let%2a.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.2">
+ <HintPath>Assets\lib\srfi.2.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.23">
+ <HintPath>Assets\lib\srfi.23.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.23.error">
+ <HintPath>Assets\lib\srfi.23.error.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.23.error.tricks">
+ <HintPath>Assets\lib\srfi.23.error.tricks.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.25">
+ <HintPath>Assets\lib\srfi.25.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.25.multi-dimensional-arrays.all">
+ <HintPath>Assets\lib\srfi.25.multi-dimensional-arrays.all.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.25.multi-dimensional-arrays.arlib">
+ <HintPath>Assets\lib\srfi.25.multi-dimensional-arrays.arlib.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.25.multi-dimensional-arrays">
+ <HintPath>Assets\lib\srfi.25.multi-dimensional-arrays.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.26.cut">
+ <HintPath>Assets\lib\srfi.26.cut.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.26">
+ <HintPath>Assets\lib\srfi.26.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.27">
+ <HintPath>Assets\lib\srfi.27.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.27.random-bits">
+ <HintPath>Assets\lib\srfi.27.random-bits.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.31">
+ <HintPath>Assets\lib\srfi.31.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.31.rec">
+ <HintPath>Assets\lib\srfi.31.rec.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.37.args-fold">
+ <HintPath>Assets\lib\srfi.37.args-fold.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.37">
+ <HintPath>Assets\lib\srfi.37.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.38">
+ <HintPath>Assets\lib\srfi.38.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.38.with-shared-structure">
+ <HintPath>Assets\lib\srfi.38.with-shared-structure.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.39">
+ <HintPath>Assets\lib\srfi.39.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.39.parameters">
+ <HintPath>Assets\lib\srfi.39.parameters.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.41">
+ <HintPath>Assets\lib\srfi.41.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.41.streams.derived">
+ <HintPath>Assets\lib\srfi.41.streams.derived.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.41.streams">
+ <HintPath>Assets\lib\srfi.41.streams.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.41.streams.primitive">
+ <HintPath>Assets\lib\srfi.41.streams.primitive.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.42">
+ <HintPath>Assets\lib\srfi.42.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.42.eager-comprehensions">
+ <HintPath>Assets\lib\srfi.42.eager-comprehensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.43">
+ <HintPath>Assets\lib\srfi.43.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.43.vectors">
+ <HintPath>Assets\lib\srfi.43.vectors.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.45">
+ <HintPath>Assets\lib\srfi.45.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.45.lazy">
+ <HintPath>Assets\lib\srfi.45.lazy.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.48">
+ <HintPath>Assets\lib\srfi.48.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.48.intermediate-format-strings.compat">
+ <HintPath>Assets\lib\srfi.48.intermediate-format-strings.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.48.intermediate-format-strings">
+ <HintPath>Assets\lib\srfi.48.intermediate-format-strings.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.6.basic-string-ports.compat">
+ <HintPath>Assets\lib\srfi.6.basic-string-ports.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.6.basic-string-ports">
+ <HintPath>Assets\lib\srfi.6.basic-string-ports.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.6">
+ <HintPath>Assets\lib\srfi.6.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.61.cond">
+ <HintPath>Assets\lib\srfi.61.cond.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.61">
+ <HintPath>Assets\lib\srfi.61.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.64">
+ <HintPath>Assets\lib\srfi.64.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.64.testing">
+ <HintPath>Assets\lib\srfi.64.testing.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.67.compare-procedures">
+ <HintPath>Assets\lib\srfi.67.compare-procedures.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.67">
+ <HintPath>Assets\lib\srfi.67.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.69.basic-hash-tables">
+ <HintPath>Assets\lib\srfi.69.basic-hash-tables.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.69">
+ <HintPath>Assets\lib\srfi.69.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.78">
+ <HintPath>Assets\lib\srfi.78.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.78.lightweight-testing.compat">
+ <HintPath>Assets\lib\srfi.78.lightweight-testing.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.78.lightweight-testing">
+ <HintPath>Assets\lib\srfi.78.lightweight-testing.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.8">
+ <HintPath>Assets\lib\srfi.8.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.8.receive">
+ <HintPath>Assets\lib\srfi.8.receive.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.9">
+ <HintPath>Assets\lib\srfi.9.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.9.records">
+ <HintPath>Assets\lib\srfi.9.records.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.98">
+ <HintPath>Assets\lib\srfi.98.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.98.os-environment-variables">
+ <HintPath>Assets\lib\srfi.98.os-environment-variables.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99">
+ <HintPath>Assets\lib\srfi.99.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99.records">
+ <HintPath>Assets\lib\srfi.99.records.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99.records.helper">
+ <HintPath>Assets\lib\srfi.99.records.helper.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99.records.inspection">
+ <HintPath>Assets\lib\srfi.99.records.inspection.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99.records.procedural">
+ <HintPath>Assets\lib\srfi.99.records.procedural.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.99.records.syntactic">
+ <HintPath>Assets\lib\srfi.99.records.syntactic.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.include.compat">
+ <HintPath>Assets\lib\srfi.private.include.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.include">
+ <HintPath>Assets\lib\srfi.private.include.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.let-opt">
+ <HintPath>Assets\lib\srfi.private.let-opt.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.OS-id-features">
+ <HintPath>Assets\lib\srfi.private.OS-id-features.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.platform-features">
+ <HintPath>Assets\lib\srfi.private.platform-features.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\srfi.private.registry">
+ <HintPath>Assets\lib\srfi.private.registry.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.fmt.c">
+ <HintPath>Assets\lib\wak.fmt.c.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.fmt.color">
+ <HintPath>Assets\lib\wak.fmt.color.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.fmt">
+ <HintPath>Assets\lib\wak.fmt.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.fmt.js">
+ <HintPath>Assets\lib\wak.fmt.js.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.foof-loop">
+ <HintPath>Assets\lib\wak.foof-loop.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.foof-loop.nested">
+ <HintPath>Assets\lib\wak.foof-loop.nested.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.define-values">
+ <HintPath>Assets\lib\wak.private.define-values.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.include.compat">
+ <HintPath>Assets\lib\wak.private.include.compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.include">
+ <HintPath>Assets\lib\wak.private.include.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.include.filesys">
+ <HintPath>Assets\lib\wak.private.include.filesys.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.include.helper">
+ <HintPath>Assets\lib\wak.private.include.helper.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.include.utils">
+ <HintPath>Assets\lib\wak.private.include.utils.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.private.let-optionals">
+ <HintPath>Assets\lib\wak.private.let-optionals.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.riastreams">
+ <HintPath>Assets\lib\wak.riastreams.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.syn-param">
+ <HintPath>Assets\lib\wak.syn-param.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing.display-condition">
+ <HintPath>Assets\lib\wak.trc-testing.display-condition.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing">
+ <HintPath>Assets\lib\wak.trc-testing.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing.limited-write">
+ <HintPath>Assets\lib\wak.trc-testing.limited-write.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing.parameters">
+ <HintPath>Assets\lib\wak.trc-testing.parameters.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing.port-tracker">
+ <HintPath>Assets\lib\wak.trc-testing.port-tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\lib\wak.trc-testing.restart">
+ <HintPath>Assets\lib\wak.trc-testing.restart.dll</HintPath>
+ </Reference>
  <Reference Include="Assets\Plugins\clipper_library">
  <HintPath>Assets\Plugins\clipper_library.dll</HintPath>
  </Reference>

@@ -20,5 +20,6 @@ public class WorldManager : MonoBehaviour {
 		}
 		
 		PhotonNetwork.Instantiate("Antisun", new Vector3(4, 200, 4), Quaternion.identity, 0);
+		
 	}
 }
