@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class PreceduralGoup : MonoBehaviour {
-
-	// Use this for initialization
+	
+	// No idea what I'm doing yet but lets just dive right in...
+	
+	// Start by making a cube!
+	
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		// Make a cube!
+		// Assumes this is an empty gameobject with just this script attached.
+		Debug.Log("here we go");
 	}
 }

@@ -1,18 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PreceduralGoup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GoupComponent.cs">
     <Files>
-      <File FileName="Assets/Scripts/NetworkManager.cs" Line="27" Column="51" />
-      <File FileName="Assets/Scripts/WorldManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Goup/MoveAble.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/MoveGoup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Goup/RuntimeGoup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SchemeHelpers.cs" Line="17" Column="1" />
-      <File FileName="Assets/Editor/SchemeReplWindow.cs" Line="34" Column="2" />
-      <File FileName="Assets/Scripts/SetName.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scripts/Player/Crosshair.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/SetName.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/Crosshair.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PreceduralGoup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GoupEntity.cs" Line="18" Column="2" />
+      <File FileName="Assets/Scripts/GoupComponent.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Player/MoveGoup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/StateComponent.cs" Line="2" Column="26" />
+      <File FileName="Assets/Scripts/StateMachine.cs" Line="4" Column="27" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="GoupComponent.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

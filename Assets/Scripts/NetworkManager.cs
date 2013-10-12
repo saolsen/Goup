@@ -24,7 +24,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 	}
 	
 	void StartConnect () {
-		PhotonNetwork.ConnectUsingSettings("alpha-0.8");
+		PhotonNetwork.ConnectUsingSettings("alpha-0.9");
 	}
 	
 	void OnJoinedLobby() {
@@ -50,6 +50,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 		
 		if (serverOwner) {
 			// Instantiate all the stuff for the world. Or load the level or whatever.
+			PhotonNetwork.Instantiate("Repl", Vector3.zero, Quaternion.identity, 0);
 			this.GetComponent<WorldManager>().SpawnWorld();
 		}
 	}
