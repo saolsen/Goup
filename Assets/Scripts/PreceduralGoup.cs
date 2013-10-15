@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using GoupLib;
 
 public class PreceduralGoup : MonoBehaviour {
 	
-	// No idea what I'm doing yet but lets just dive right in...
-	
-	// Start by making a cube!
+	public Material mat;
 	
 	void Start () {
-		// Make a cube!
-		// Assumes this is an empty gameobject with just this script attached.
 		Debug.Log("here we go");
+		
+		gameObject.AddComponent<MeshFilter>();
+		gameObject.AddComponent<MeshRenderer>();
+		
+		var m = Precedural.Box(new Vector3(1, 0, 0), new Vector3(0, 4, 0), new Vector3(0, 0, 2));
+		
+		Mesh mesh = m.GetMesh();
+		
+		MeshFilter mesh_filter = gameObject.GetComponent<MeshFilter>();
+		
+		mesh_filter.mesh = mesh;
+		
+		MeshRenderer mesh_renderer = gameObject.GetComponent<MeshRenderer>();
+		mesh_renderer.material = mat;
 	}
+	
 }

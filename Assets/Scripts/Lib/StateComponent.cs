@@ -15,7 +15,7 @@ public class StateComponent<T> : MonoBehaviour {
 	public Entity entity;
 	public PhotonView pv;
 	
-	public StateMachine<T> stateMachine = null;
+	protected StateMachine<T> stateMachine;
 	
 	private T current_state;
 	private StateProcess active_process;
@@ -32,20 +32,25 @@ public class StateComponent<T> : MonoBehaviour {
 		}
 		
 		current_state = stateMachine.initial_state;
+		SetProcess(current_state);
 	}
 	
-	[RPC]
-	void BroadCastChange(T newState, PhotonMessageInfo info) {
-		if (!Comparer<T>.Equals(current_state, newState)) {
-			active_process.exit();
-			current_state = newState;
-			active_process = stateMachine.state_process[newState];
-			active_process.enter();
+	void SetProcess(T state) {
+		var new_process = stateMachine.state_process[state];
+		if (new_process != null) {
+			active_process = new_process;	
+		} else {
+			active_process = new StateProcess();
 		}
 	}
 	
-	void ChangeState(T newState) {
-		pv.RPC("BroadCastChange", PhotonTargets.AllBuffered, newState);
+	protected void ChangeState(T newState) {
+		if (!Comparer<T>.Equals(current_state, newState)) {
+			active_process.exit();
+			current_state = newState;
+			SetProcess(newState);
+			active_process.enter();
+		}
 	}
 	
 	// State Process Functions
@@ -73,15 +78,15 @@ public class StateComponent<T> : MonoBehaviour {
 		active_process.on_trigger_exit(c);
 	}
 	
-	void OnCollisionEnter (Collider c) {
+	void OnCollisionEnter (Collision c) {
 		active_process.on_collision_enter(c);
 	}
 	
-	void OnCollisionStay (Collider c) {
+	void OnCollisionStay (Collision c) {
 		active_process.on_collision_stay(c);
 	}
 	
-	void OnCollisionExit (Collider c) {
+	void OnCollisionExit (Collision c) {
 		active_process.on_collision_exit(c);
 	}
 	

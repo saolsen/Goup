@@ -11,6 +11,7 @@ public class EventHandlers {
 public class StateProcess {
 	static Action DoNothing = (() => { });
 	static Action<Collider> DoNothingCollider = ((c) => { });
+	static Action<Collision> DoNothingCollision = ((c) => { });
 	
 	// Called when state is exited or entered
 	public Action enter = DoNothing;
@@ -23,9 +24,9 @@ public class StateProcess {
 	public Action<Collider> on_trigger_enter = DoNothingCollider;
 	public Action<Collider> on_trigger_stay = DoNothingCollider;
 	public Action<Collider> on_trigger_exit = DoNothingCollider;
-	public Action<Collider> on_collision_enter = DoNothingCollider;
-	public Action<Collider> on_collision_stay = DoNothingCollider;
-	public Action<Collider> on_collision_exit = DoNothingCollider;
+	public Action<Collision> on_collision_enter = DoNothingCollision;
+	public Action<Collision> on_collision_stay = DoNothingCollision;
+	public Action<Collision> on_collision_exit = DoNothingCollision;
 	public Action on_mouse_enter = DoNothing;
 	public Action on_mouse_up = DoNothing;
 	public Action on_mouse_down = DoNothing;

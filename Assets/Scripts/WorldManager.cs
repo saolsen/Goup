@@ -19,6 +19,9 @@ public class WorldManager : MonoBehaviour {
 			pv.RPC("Setup", PhotonTargets.AllBuffered, scale, mass);
 		}
 		
+		// Set Terrain
+		Terrain.activeTerrain.GetComponent<PhotonView>().RPC("ModifyTerrain", PhotonTargets.AllBuffered);
+		
 		PhotonNetwork.Instantiate("Antisun", new Vector3(4, 200, 4), Quaternion.identity, 0);
 		
 	}

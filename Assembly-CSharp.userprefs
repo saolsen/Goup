@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Precedural.fs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TestTerrainGen.cs">
     <Files>
-      <File FileName="Precedural.fs" Line="19" Column="16" />
+      <File FileName="Assets/TestTerrainGen.cs" Line="21" Column="24" />
+      <File FileName="Assets/Scripts/OverGreenClickBlue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PreceduralGoup.cs" Line="16" Column="92" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="GoupLib" expanded="True" selected="True" />
+          <Node name="Assembly-CSharp" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

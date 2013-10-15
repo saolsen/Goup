@@ -29,7 +29,7 @@
     <ConsolePause>false</ConsolePause>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp bin/Debug/GoupLib.dll ../Assets/" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp bin/Debug/GoupLib.dll ../Assets/FsharpLibraries/" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -54,12 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="TestBehavior.fs" />
-    <Compile Include="Entity.fs" />
-    <Compile Include="Events.fs">
-      <DependentUpon>Entity.fs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseComponent.fs" />
+    <Compile Include="Precedural.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
 </Project>
