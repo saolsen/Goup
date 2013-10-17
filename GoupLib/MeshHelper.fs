@@ -1,6 +1,6 @@
 // This is written in fsharp because I want this class to be immutable and c# doesn't have
 // An immutable persistant list type.
-module GoupLib.Precedural
+module GoupLib.MeshHelper
 open UnityEngine
 
 type GoupMesh = { vertices  : Vector3 list;

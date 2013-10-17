@@ -239,6 +239,9 @@
  <Reference Include="Assets\FsharpLibraries\GoupLib">
  <HintPath>Assets\FsharpLibraries\GoupLib.dll</HintPath>
  </Reference>
+ <Reference Include="Assets\libnoise\LibNoise">
+ <HintPath>Assets\libnoise\LibNoise.dll</HintPath>
+ </Reference>
  <Reference Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\Newtonsoft.Json">
  <HintPath>Assets\Photon Unity Networking\Editor\PhotonNetwork\Newtonsoft.Json.dll</HintPath>
  </Reference>

@@ -331,6 +331,9 @@
  <Reference Include="Assets\FsharpLibraries\GoupLib">
  <HintPath>Assets\FsharpLibraries\GoupLib.dll</HintPath>
  </Reference>
+ <Reference Include="Assets\libnoise\LibNoise">
+ <HintPath>Assets\libnoise\LibNoise.dll</HintPath>
+ </Reference>
  <Reference Include="Assets\Plugins\clipper_library">
  <HintPath>Assets\Plugins\clipper_library.dll</HintPath>
  </Reference>

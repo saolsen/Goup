@@ -51,10 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="LibNoise">
+      <HintPath>..\Assets\libnoise\LibNoise.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Precedural.fs" />
+    <Compile Include="MeshHelper.fs" />
+    <Compile Include="PreceduralGeneration.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
+  <ItemGroup>
+    <None Include="PreceduralViz.fsx" />
+  </ItemGroup>
 </Project>

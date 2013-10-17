@@ -13,6 +13,9 @@ public class TestTerrainGen : MonoBehaviour {
 		var width = terrainData.heightmapWidth;
 		var height = terrainData.heightmapHeight;
 
+		Debug.Log (width);
+		Debug.Log (height);
+
 		// My research tells me there's no functional way to do this, embrace the demons.
 		var array = new float[width,height];
 
@@ -20,7 +23,7 @@ public class TestTerrainGen : MonoBehaviour {
 			for (int z = 0; z < height; ++z) {
 				var val = Mathf.PerlinNoise ((float)x / (float)width * scale, (float)z / (float)height * scale)/10.0f;
 
-				array [x, z] = val;
+				array [x,z] = val;
 			}
 		}
 

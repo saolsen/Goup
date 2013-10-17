@@ -13,7 +13,7 @@ public class PreceduralGoup : MonoBehaviour {
 		gameObject.AddComponent<MeshFilter>();
 		gameObject.AddComponent<MeshRenderer>();
 		
-		var m = Precedural.Box(new Vector3(1, 0, 0), new Vector3(0, 4, 0), new Vector3(0, 0, 2));
+		var m = MeshHelper.Box(new Vector3(1, 0, 0), new Vector3(0, 4, 0), new Vector3(0, 0, 2));
 		
 		Mesh mesh = m.GetMesh();
 		
@@ -23,6 +23,7 @@ public class PreceduralGoup : MonoBehaviour {
 		
 		MeshRenderer mesh_renderer = gameObject.GetComponent<MeshRenderer>();
 		mesh_renderer.material = mat;
+
 	}
 	
 }
