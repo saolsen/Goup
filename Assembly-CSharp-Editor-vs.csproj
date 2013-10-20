@@ -44,7 +44,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\TerrainPerlinNoise.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\AutoSelect.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\Common.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\EditorAutoSelect.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\EditorGUIHelper.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\HorizontalPanes.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\Toolbar.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\Editor\VerticalPanes.cs" />
+     <Compile Include="Assets\Editor\UnityGUIExtensions\GUIHelper.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\Evaluator.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\LogEntry.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\PrettyPrint.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\ReflectionProxy.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\Shell.cs" />
+     <Compile Include="Assets\Editor\UnityREPL\UnityREPLHelper.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonConverter.cs" />
      <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonEditor.cs" />
@@ -153,6 +166,7 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\ModernCameraCrouch.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Standard\Camera\CameraDead.txt" />
+     <None Include="Assets\LibNoise\COPYING.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\CowboyShooter.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\MouseLowSensWeapon.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\MaceWeaponSwingDownLeft.txt" />
@@ -186,6 +200,7 @@
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\SystemOFFWeaponGlideIn.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\SniperWeapon.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\SystemOFFCamera.txt" />
+     <None Include="Assets\LibNoise\COPYING.LESSER.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\PerspOldCamera.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Standard\Weapon\WeaponGenericSlide.txt" />
      <None Include="Assets\UltimateFPS\Scripts\Presets\Demo\MafiaWeapon.txt" />
@@ -233,15 +248,6 @@
      <None Include="Assets\UltimateFPS\Scripts\Presets\Standard\Controller\ControllerDefault.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\GameDraw\Shaders\Highlight.shader" />
- <Reference Include="Assets\FsharpLibraries\FSharp.Core">
- <HintPath>Assets\FsharpLibraries\FSharp.Core.dll</HintPath>
- </Reference>
- <Reference Include="Assets\FsharpLibraries\GoupLib">
- <HintPath>Assets\FsharpLibraries\GoupLib.dll</HintPath>
- </Reference>
- <Reference Include="Assets\libnoise\LibNoise">
- <HintPath>Assets\libnoise\LibNoise.dll</HintPath>
- </Reference>
  <Reference Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\Newtonsoft.Json">
  <HintPath>Assets\Photon Unity Networking\Editor\PhotonNetwork\Newtonsoft.Json.dll</HintPath>
  </Reference>
@@ -274,6 +280,9 @@
  </Reference>
  <Reference Include="\Applications\Unity\Unity.app\Contents\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions">
  <HintPath>\Applications\Unity\Unity.app\Contents\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\Editor\UnityREPL\Plugins\Mono.CSharp">
+ <HintPath>Assets\Editor\UnityREPL\Plugins\Mono.CSharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

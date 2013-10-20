@@ -15,11 +15,22 @@ open System.Drawing
 open System.Windows.Forms
 open LibNoise
 
-let perlin = new LibNoise.Perlin()
+let width = 513
+let height = 513
 
 // Display or something...
 let form = new Form()
-let pb = new PictureBox()
+let pb = new PictureBox(BackColor = Color.White,
+                        Dock = DockStyle.Fill,
+                        SizeMode = PictureBoxSizeMode.CenterImage)
+
+let bm = new Bitmap(width, height)                 
+let gfx = Graphics.FromImage(bm)
+
+for x in 0..512 do
+    for z in 0..512 do
+        let v = Array2D.get grays x z
+        bm.SetPixel(x, z, Color.FromArgb(v, v, v))
 
 //Image.FromHbitmap
 form.Controls.Add(pb)

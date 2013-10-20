@@ -1,0 +1,2 @@
+/Users/steveo/Dropbox/unity/GoupTwo/GoupLib/bin/Debug/UnityEngine.dll
+/Users/steveo/Dropbox/unity/GoupTwo/GoupLib/bin/Debug/LibNoise.dll

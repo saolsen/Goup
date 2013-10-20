@@ -1,0 +1,16 @@
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/steveo/Dropbox/unity/GoupTwo/obj/Debug/Assembly-CSharp.dll
+/Users/steveo/Dropbox/unity/GoupTwo/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/UnityEngine.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/UnityEditor.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/FSharp.Core.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/GoupLib.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/LibNoise.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/clipper_library.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/GameDraw.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/Photon3Unity3D.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/Poly2Tri.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/Mono.Cecil.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/nunit.framework.dll
+/Users/steveo/Dropbox/unity/GoupTwo/Temp/bin/Debug/ICSharpCode.NRefactory.dll

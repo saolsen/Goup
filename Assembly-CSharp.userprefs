@@ -1,9 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PreceduralGoup.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Management/NetworkManager.cs" Line="46" Column="97" />
+      <File FileName="Assets/Scripts/Management/WorldManager.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/PreceduralGoup.cs" Line="38" Column="1" />
+      <File FileName="Assets/Scripts/TestTerrainGen.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/Lib/TerrainGenerator.cs" Line="8" Column="39" />
+      <File FileName="Assets/Scripts/Precedural/PreceduralTerrainChunk.cs" Line="12" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State selected="True" />
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
